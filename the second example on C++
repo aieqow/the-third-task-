@@ -1,0 +1,13 @@
+#include <algorithm> // для std::lower_bound
+#include <vector>
+
+int main() {
+    std::vector<int> a = {1, 3, 5, 7, 9}; // отсортированный массив
+    int x = 6; // число, которое нужно найти 
+    auto it = std::lower_bound(a.begin(), a.end(), x); // позиция вставки x
+    int index = it - a.begin(); // индекс позиции
+    if (it != a.end() && *it == x) {
+        // x найден по индексу index
+    } else {
+        // x в массиве нет, позиция вставки
+    }
