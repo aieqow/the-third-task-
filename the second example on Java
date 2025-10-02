@@ -1,0 +1,12 @@
+public class BinarySearch {
+    public static int search(int[] a, int x) {
+        int l=0, r=a.length-1; // Определение границ поиска
+        while (l<=r) {
+            int m=l+(r-l)/2; //Нахождение среднего индекса
+            if (a[m]==x) return m; // найден
+            if (a[m]<x) l=m+1; // искать справа
+            else r=m-1; // искать слева
+        }
+        return -1; // не найден
+    }
+}
