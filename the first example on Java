@@ -1,12 +1,18 @@
-import java.util.Arrays;
+mport java.util.*;
 
-public class BinarySearch {
+public class BinaryHeapExample {
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 7, 9};  // Отсортированный массив
-        int target = 5;                // Искомый элемент
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         
-        int result = Arrays.binarySearch(arr, target);  // Встроенный бинарный поиск
+        // Добавление элементов
+        minHeap.add(5);
+        minHeap.add(2);
+        minHeap.add(8);
+        minHeap.add(1);
         
-        System.out.println(result >= 0 ? "Найдено: " + result : "Не найдено");
+        // Извлечение минимального элемента
+        while (!minHeap.isEmpty()) {
+            System.out.print(minHeap.poll() + " "); // 1 2 5 8
+        }
     }
 }
