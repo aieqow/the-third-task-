@@ -1,12 +1,11 @@
-public class BinarySearch {
-    public static int search(int[] a, int x) {
-        int l=0, r=a.length-1; // Определение границ поиска
-        while (l<=r) {
-            int m=l+(r-l)/2; //Нахождение среднего индекса
-            if (a[m]==x) return m; // найден
-            if (a[m]<x) l=m+1; // искать справа
-            else r=m-1; // искать слева
-        }
-        return -1; // не найден
+import java.util.PriorityQueue;
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>(); // создаем минимальную кучу
+        heap.add(5); // добавляем элемент
+        heap.add(3);
+        heap.add(8);
+        System.out.println(heap.poll()); // извлекаем и удаляем минимальный элемент (3)
     }
 }
